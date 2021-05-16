@@ -9,8 +9,17 @@ import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
 // State and reducers
+// Import the things
+import channelsReducer from "./reducers/channels_reducer";
+import currentUsernameReducer from "./reducers/current_username_reducer";
+import messagesReducer from "./reducers/messages_reducer";
+import selectedChannelReducer from "./reducers/selected_channel_reducer";
+
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  channels: channelsReducer,
+  currentUsername: currentUsernameReducer,
+  messages: messagesReducer,
+  selectedChannel: selectedChannelReducer
 });
 
 // initialState
