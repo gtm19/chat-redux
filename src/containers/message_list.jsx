@@ -13,11 +13,12 @@ class MessageList extends Component { //eslint-disable-line
   }
 
   render() {
+    const { messages } = this.props;
     return (
       <div className="message-list container">
         <h3 className="bottom-grey">Messages in #{this.props.selectedChannel}</h3>
         {
-          this.props.messages.map((message) => {
+          messages.map((message) => {
             return <Message message={message} key={message.id} />;
           })
         }
