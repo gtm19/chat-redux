@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 $top-bottom-margin: 20px;
 
 body {
-  font-family: Helvetica;
+  font-family: "Roboto", sans-serif;
 }
 .app {
   height: 100vh;
