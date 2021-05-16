@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="side-bar">
-        <p>React + Redux starter</p>
+        <img className="logo" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" alt="The Le Wagon logo" />
       </div>
       <ChannelList />
       <MessageList />

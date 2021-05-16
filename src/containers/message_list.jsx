@@ -1,14 +1,22 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 
 class MessageList extends Component { //eslint-disable-line
   render() {
+    console.log(this.props.messages);
     return (
       <div className="message-list">
-        Message List
+        <h3 className="bottom-grey">Messages</h3>
       </div>
     );
   }
 }
 
-export default MessageList;
+const mapStateToProps = (state) => {
+  return {
+    messages: state.messages
+  };
+};
+
+export default connect(mapStateToProps)(MessageList);

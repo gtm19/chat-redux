@@ -5,7 +5,7 @@ class ChannelList extends Component { //eslint-disable-line
   render() {
     return (
       <div className="channel-list">
-        Channel List
+        <h3>Channels</h3>
       </div>
     );
   }
