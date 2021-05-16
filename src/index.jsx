@@ -13,9 +13,17 @@ const reducers = combineReducers({
   changeMe: (state = null, action) => state
 });
 
+// initialState
+const initialState = {
+  messages: [],
+  channels: [],
+  selectedChannel: {},
+  currentUsername: window.prompt("What is your username?")
+};
+
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+  <Provider store={createStore(reducers, initialState)}>
     <App />
   </Provider>,
   document.getElementById('root')
