@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 class MessageList extends Component { //eslint-disable-line
   render() {
     return (
-      <div>
-        Hello
+      <div className="message-list">
+        Message List
       </div>
     );
   }

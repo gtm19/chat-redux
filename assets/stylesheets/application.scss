@@ -1,7 +1,28 @@
+$top-bottom-margin: 20px;
+
 body {
   font-family: Helvetica;
 }
 .app {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: $top-bottom-margin 0;
+  height: calc(100vh - 40px);
+  display: flex;
+  align-items: stretch;
+
+  .side-bar {
+    flex: 0 0 80px;
+    background: rgba($color: red, $alpha: 0.1);
+  }
+
+  .channel-list {
+    flex: 0 0 200px;
+    background: rgba($color: blue, $alpha: 0.1);
+  }
+
+  .message-list {
+    flex: 1 1;
+    background: rgba($color: yellow, $alpha: 0.1);
+  }
+
+
 }

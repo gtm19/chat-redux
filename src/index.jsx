@@ -32,7 +32,7 @@ const initialState = {
   messages: [],
   channels: ["general", "react", "paris"],
   selectedChannel: "general",
-  currentUsername: window.prompt("What is your username?") ||  `user${Math.floor(Math.random() * 1e6)}` //eslint-disable-line
+  currentUsername: "Deletethis" || window.prompt("What is your username?") ||  `user${Math.floor(Math.random() * 1e6)}` //eslint-disable-line
 };
 
 // render an instance of the component in the DOM
