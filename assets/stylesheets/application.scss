@@ -32,6 +32,14 @@ body {
   .channel-list {
     flex: 0 0 200px;
     background: rgba(0, 0, 0, 0.02);
+
+    ul {
+      padding-left: 0;
+    }
+    li {
+      list-style: none;
+      margin: 4px 0;
+    }
   }
 
   .message-list {

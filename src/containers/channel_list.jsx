@@ -6,9 +6,24 @@ class ChannelList extends Component { //eslint-disable-line
     return (
       <div className="channel-list">
         <h3>Channels</h3>
+        <ul>
+          {
+            this.props.channels.map((channel) => {
+              return (
+                <li>#{channel}</li>
+              );
+            })
+          }
+        </ul>
       </div>
     );
   }
 }
 
-export default ChannelList;
+const mapStateToProps = (state) => {
+  return {
+    channels: state.channels
+  };
+};
+
+export default connect(mapStateToProps)(ChannelList);
