@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 
 import Message from "../components/message";
+import MessageForm from "../containers/message_form"
 
 import { getMessages } from "../actions";
 
@@ -13,13 +14,14 @@ class MessageList extends Component { //eslint-disable-line
 
   render() {
     return (
-      <div className="message-list">
+      <div className="message-list container">
         <h3 className="bottom-grey">Messages in #{this.props.selectedChannel}</h3>
         {
           this.props.messages.map((message) => {
             return <Message message={message} key={message.id} />;
           })
         }
+        <MessageForm />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class ChannelList extends Component { //eslint-disable-line
   render() {
     return (
-      <div className="channel-list">
+      <div className="channel-list container">
         <h3>Channels</h3>
         <ul>
           {

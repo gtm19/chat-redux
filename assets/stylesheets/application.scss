@@ -11,14 +11,16 @@ $top-bottom-margin: 20px;
 body {
   font-family: "Roboto", sans-serif;
 }
+
+.container {
+  margin: 0 0;
+  padding-top: 12px;
+}
+
 .app {
   height: 100vh;
   display: flex;
   align-items: stretch;
-
-  div {
-    padding: 12px;
-  }
 
   h3 {
     padding-bottom: 12px;
@@ -33,6 +35,7 @@ body {
   }
 
   .side-bar {
+    padding-top: 12px;
     flex: 0 0 80px;
     background: rgba(0, 0, 0, 0.1);
   }
