@@ -3,7 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { logger } from 'redux-logger';
+// import { logger } from 'redux-logger';
+import reduxPromise from 'redux-promise';
 
 // internal modules
 import App from './components/app';
@@ -25,24 +26,13 @@ const reducers = combineReducers({
 });
 
 // middleware
-const middleware = applyMiddleware(logger);
+const middleware = applyMiddleware(reduxPromise);
 
 // initialState
 const initialState = {
-  messages: [
-    {
-      author: "anonymous92",
-      content: "Hello world!",
-      created_at: "2017-09-26T23:03:16.365Z"
-    },
-    {
-      author: "anonymous77",
-      content: "My name is anonymous77",
-      created_at: "2017-09-26T23:03:21.194Z"
-    }
-  ],
-  channels: ["general", "react", "paris"],
-  selectedChannel: "general",
+  messages: [],
+  channels: ["test", "general", "react", "paris"],
+  selectedChannel: "test",
   currentUsername: "Deletethis" || window.prompt("What is your username?") ||  `user${Math.floor(Math.random() * 1e6)}` //eslint-disable-line
 };
 

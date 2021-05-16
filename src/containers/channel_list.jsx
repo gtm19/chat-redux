@@ -10,7 +10,7 @@ class ChannelList extends Component { //eslint-disable-line
           {
             this.props.channels.map((channel) => {
               return (
-                <li>#{channel}</li>
+                <li key={channel}>#{channel}</li>
               );
             })
           }
