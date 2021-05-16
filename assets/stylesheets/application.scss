@@ -13,7 +13,7 @@ body {
   }
 
   h3 {
-    padding-bottom: 8px;
+    padding-bottom: 12px;
   }
   
   .logo {
@@ -44,5 +44,20 @@ body {
 
   .message-list {
     flex: 1 1;
+
+    .message {
+      .username {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-right: 8px;
+      }
+
+      .timestamp {
+        font-size: 0.8em;
+        font-style: italic;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
   }
 }
