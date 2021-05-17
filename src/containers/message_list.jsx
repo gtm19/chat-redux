@@ -3,7 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 
 import Message from "../components/message";
-import MessageForm from "../containers/message_form"
+import MessageForm from "../containers/message_form";
 
 import { getMessages } from "../actions";
 

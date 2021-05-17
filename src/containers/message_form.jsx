@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from 'react-redux';
+
+import { sendMessage } from "../actions";
 
 class MessageForm extends Component {
   constructor(props) {
@@ -13,6 +17,11 @@ class MessageForm extends Component {
   }
 
   handleSubmit(event) {
+    this.props.sendMessage(
+      this.props.selectedChannel,
+      this.props.currentUsername,
+      this.state.value
+    );
     this.setState({
       value: ''
     });
@@ -27,8 +36,23 @@ class MessageForm extends Component {
           <button type="submit">Submit</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default MessageForm;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(
+    { sendMessage },
+    dispatch
+  );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    messages: state.messages,
+    selectedChannel: state.selectedChannel,
+    currentUsername: state.currentUsername
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);
