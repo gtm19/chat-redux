@@ -7,9 +7,13 @@ import MessageForm from "../containers/message_form";
 
 import { getMessages } from "../actions";
 
-class MessageList extends Component { //eslint-disable-line
+class MessageList extends Component {
   componentDidMount() {
-    this.props.getMessages(this.props.selectedChannel);
+    setInterval(() => this.props.getMessages(this.props.selectedChannel), 1000);
+  }
+
+  componentWillUnmount() {
+    // TODO: unset the interval
   }
 
   render() {
