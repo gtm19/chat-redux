@@ -13,7 +13,6 @@ class MessageForm extends Component {
   }
 
   handleSubmit(event) {
-    alert('A message was submitted: ' + this.state.value);
     this.setState({
       value: ''
     });
