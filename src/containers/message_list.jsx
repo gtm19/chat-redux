@@ -3,13 +3,13 @@ import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 
 import Message from "../components/message";
-import MessageForm from "../containers/message_form";
 
 import { getMessages } from "../actions";
 
 class MessageList extends Component {
   componentDidMount() {
     setInterval(() => this.props.getMessages(this.props.selectedChannel), 1000);
+    this.props.ref.messageList.current.scrollTop = 300;
   }
 
   componentWillUnmount() {
@@ -19,14 +19,13 @@ class MessageList extends Component {
   render() {
     const { messages } = this.props;
     return (
-      <div className="message-list container">
+      <div>
         <h3 className="bottom-grey">Messages in #{this.props.selectedChannel}</h3>
         {
           messages.map((message) => {
             return <Message message={message} key={message.id} />;
           })
         }
-        <MessageForm />
       </div>
     );
   }

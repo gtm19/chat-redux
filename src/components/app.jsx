@@ -1,5 +1,5 @@
-import React from 'react';
-import MessageList from "../containers/message_list";
+import React, { Component } from 'react';
+import MessageList from "../components/message_panel";
 import ChannelList from "../containers/channel_list";
 
 const App = () => {
