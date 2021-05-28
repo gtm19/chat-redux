@@ -9,7 +9,6 @@ import { getMessages } from "../actions";
 class MessageList extends Component {
   componentDidMount() {
     setInterval(() => this.props.getMessages(this.props.selectedChannel), 1000);
-    this.props.ref.messageList.current.scrollTop = 300;
   }
 
   componentWillUnmount() {

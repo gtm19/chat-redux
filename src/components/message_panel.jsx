@@ -9,6 +9,13 @@ class MessagePanel extends Component {
     this.messageList = createRef();
   }
 
+  componentDidMount() {
+    if (this.messageList.current) {
+      const { current } = this.messageList;
+      current.scrollTop = current.scrollHeight;
+    }
+  }
+
   componentWillUnmount() {
   }
 
